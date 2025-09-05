@@ -6,7 +6,7 @@ import LiveMapImage from "../assets/LiveMap.png";
 
 function LiveMap() {
   return (
-    <section className="how-it-works text-white bg-dark py-4">
+    <section className="how-it-works text-white py-4">
       <div className="container">
         <div className="row align-items-center">
           

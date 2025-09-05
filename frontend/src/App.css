@@ -1,7 +1,7 @@
 /* Navbar styles */
 .navbar {
   background: #111010;
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
+  box-shadow: 2px 1px 10px rgba(86, 80, 80, 0.5);
   transition: background 0.3s ease;
 }
 
@@ -106,6 +106,7 @@
 /* Hero Section */
 .hero-section {
   min-height: 600px; 
+  background-color: #111010;
 }
 
 /* How It Works Section */
@@ -176,3 +177,10 @@
    color: #13EC46 !important;        
   transform: scale(1.2);   
 }
+
+/* Service Page Styles */
+.services-page {
+  background: #111010;
+  padding: 3rem 0;
+}
+
