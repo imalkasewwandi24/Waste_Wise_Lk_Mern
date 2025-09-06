@@ -1,11 +1,11 @@
 /* Navbar styles */
 .navbar {
   background: #111010;
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
+  box-shadow: 2px 1px 10px rgba(86, 80, 80, 0.5);
   transition: background 0.3s ease;
 }
 
-/* Logo  */
+
 .navbar .navbar-brand {
   font-size: 1.5rem;
   letter-spacing: 1px;
@@ -26,7 +26,7 @@
   color: #08d672;
 }
 
-/* Navbar links */
+
 .navbar-nav .nav-link {
   font-weight: 500;
   font-size: 1rem;
@@ -39,7 +39,7 @@
   transform: scale(1.05);
 }
 
-/* Dropdown menu */
+
 .navbar-nav .dropdown-menu {
   background-color: #111010;
   border: none;
@@ -55,7 +55,7 @@
   color: #121212;
 }
 
-/* Sign In Button */
+
 .navbar .btn-success {
   background-color: #13EC46;
   border: none;
@@ -73,14 +73,14 @@
   transform: scale(1.05);
 }
 
-/* Responsive tweaks */
+
 @media (max-width: 992px) {
   .navbar .btn-success {
     display: none;
   }
 }
 
-/* Navbar toggler */
+
 .navbar-toggler {
   border-color: #00ff85;
 }
@@ -106,6 +106,7 @@
 /* Hero Section */
 .hero-section {
   min-height: 600px; 
+  background-color: #111010;
 }
 
 /* How It Works Section */
@@ -175,6 +176,133 @@
 .social-icons a:hover {
    color: #13EC46 !important;        
   transform: scale(1.2);   
+}
+
+/* Service Page Styles */
+
+.services-page {
+  background: #111010;
+  padding: 3rem 0;
+}
+
+.section-gap {
+  margin-top: 5rem;   
+  margin-bottom: 5rem; 
+}
+
+.card-service {
+  position: relative;           
+  margin-bottom: 64px;           
+  border: 2px solid #13EC46;      
+  border-radius: 10px;           
+}
+
+.card-service::after {
+  content: "";
+  position: absolute;
+  bottom: -210px;              
+  left: 50%;
+  transform: translateX(-50%);
+  width: 0;
+  height: 190px;                 
+  border-left: 2px solid #13EC46;
+}
+
+#community .card-service::after {
+  display: none;
+}
+
+.card-service::before {
+  content: "";
+  position: absolute;
+  bottom: -210px;           
+  left: 50%;
+  transform: translateX(-50%);
+  width: 12px;              
+  height: 12px;
+  background-color: #13EC46; 
+  border-radius: 50%;     
+}
+
+#community .card-service::before {
+  display: none;
+}
+
+@media (max-width: 767.98px) {
+  .card-service {
+    margin-bottom: 40px; 
+  }
+
+  .card-service::after {
+    bottom: -40px;
+    height: 30px;   
+  }
+
+  .card-service::before {
+    bottom: -50px; 
+    width: 8px;     
+    height: 8px;
+  }
+}
+
+/* Small Button Component */
+
+.small-btn {
+  background-color: #3F3F3F;
+  color: #13EC46;
+  border-color: #13EC46;
+  width: 140px;       
+  height: 40px;       
+  border-radius: 10px;
+  font-size: 16px;    
+  font-weight: bold;
+}
+
+/* Sign Up Page Styles */
+
+.signup-page {
+  background: #111010;
+  
+}
+.right-section {
+    background-color: #3F3F3F; 
+    border-radius: 10px;
+   
+}
+.card .col-6 .p-4 form .form-control {
+  background: #2E2E2E;
+  border-radius: 20px;
+  border: none;
+  box-shadow: none;
+  color: #fff;
+  width: 90%;       
+  max-width: 300px; 
+}
+
+.card .col-6 .p-4 form .form-control:focus {
+  outline: none;      
+  box-shadow: none;  
+  border: none;       
+}
+
+.center-line {
+    height: 4px;
+    width: 100px;
+    background-color: #13EC46; 
+    margin: 0 auto 1rem auto;   
+    border-radius: 2px;
+}
+
+.right-section .form-control::placeholder {
+    color: #ccc;         
+    opacity: 0.4;          
+}
+
+.right-section p a {
+    color: #13EC46;       
+    text-decoration: none; 
+    font-weight: 500;      
+    transition: color 0.3s ease;
 }
 
 

@@ -6,7 +6,7 @@ import "../index.css";
 
 function Hero() {
   return (
-    <section className="hero-section text-white bg-dark py-5">
+    <section className="hero-section text-white py-5">
       <div className="container">
         <div className="row align-items-center">
           

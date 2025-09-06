@@ -8,7 +8,7 @@ import News3 from "../assets/News3.png"
 
 function NewsTips() {
   return (
-    <section className="how-it-works text-white bg-dark py-5">
+    <section className="how-it-works text-white py-5">
         <div className="container">
             <div className="row mb-3">
                 <h1 className="fw-bold mt-2 mb-5">News and Tips</h1>

@@ -7,7 +7,7 @@ import Dispose from "../assets/Dispose.png";
 
 function HowItWorks() {
   return (
-    <section className="how-it-works text-white bg-dark py-0">
+    <section className="how-it-works text-white py-0">
         <div className="container">
             
             <div className="row mb-5">
