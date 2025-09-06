@@ -175,4 +175,74 @@
 .social-icons a:hover {
    color: #13EC46 !important;        
   transform: scale(1.2);   
+
+}
+
+
+/* About Page Styling */
+.about-page {
+  background-color: black;
+  color: white;
+}
+
+.about-page h1,
+.about-page h2 {
+  color: #ffffff;
+}
+
+.about-page p {
+  color: #e0e0e0;
+  font-size: 1.1rem;
+  line-height: 1.8;
+}
+
+/* Card-style borders for mission & vision */
+.about-card {
+  border: 2px solid #333;
+  background-color: #121212;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.about-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0px 6px 16px rgba(0, 0, 0, 0.6);
+}
+
+/* Images inside mission & vision */
+.about-card img {
+  max-width: 100%;
+  height: auto;
+  border: 2px solid #00ff99;
+  border-radius: 8px;
+}
+
+/* Section background */
+.what-we-do-section {
+  background-color: black;
+  color: white;
+  padding: 60px 0;
+}
+
+/* Dot styling */
+.dot {
+  width: 20px;
+  height: 20px;
+  background-color: #00ff99;
+  border-radius: 50%;
+  box-shadow: 0 0 10px #00ff99;
+}
+
+/* Line styling between dots */
+.dot-line {
+  flex: 1;
+  height: 4px;
+  background-color: #00ff99;
+  margin: 0 8px;
+}
+
+/* Labels */
+.what-we-do-section p {
+  color: #e0e0e0;
+  font-size: 1.1rem;
+  font-weight: 500;
 }
