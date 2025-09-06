@@ -3,8 +3,9 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Navbar from "./components/Navbar";
 import Home from "./pages/Home";
 import Services from "./pages/Service";
-import SignUp from "./pages/SignUp";
+import SignUp from "./pages/SignUp";import About from "./pages/About";
 import Footer from "./components/Footer";
+import Contact from "./pages/Contact";
 
 
 
@@ -17,6 +18,8 @@ function App() {
       <div className="pt-0"> {/* padding so navbar won't overlap */}
         <Routes>
           <Route path="/" element={<Home />} />
+          <Route path="/about" element={<About />} />
+          <Route path="/contact" element={<Contact/>}/>
           <Route path="/services" element={<Services />} />
           <Route path="/signup" element={<SignUp />} />
         </Routes>
