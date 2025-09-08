@@ -304,3 +304,21 @@
     font-weight: 500;      
     transition: color 0.3s ease;
 }
+
+/* SignIn */
+.left-section {
+    background-color: #3F3F3F; 
+    border-radius: 10px;
+   
+}
+.left-section .form-control::placeholder {
+    color: #ccc;         
+    opacity: 0.4;          
+}
+
+.left-section p a {
+    color: #13EC46;       
+    text-decoration: none; 
+    font-weight: 500;      
+    transition: color 0.3s ease;
+}
