@@ -6,6 +6,7 @@ import Services from "./pages/Service";
 import SignUp from "./pages/SignUp";import About from "./pages/About";
 import Footer from "./components/Footer";
 import Contact from "./pages/Contact";
+import SignIn from "./pages/SignIn";
 
 
 
@@ -21,6 +22,7 @@ function App() {
           <Route path="/about" element={<About />} />
           <Route path="/contact" element={<Contact/>}/>
           <Route path="/services" element={<Services />} />
+           <Route path="/signin" element={<SignIn />} />
           <Route path="/signup" element={<SignUp />} />
         </Routes>
       </div>

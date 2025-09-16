@@ -1,6 +1,10 @@
 import React from "react";
 import "../App.css";
 import { FaEnvelope, FaPhone, FaMapMarkerAlt, FaClock } from "react-icons/fa";
+import SmallButton from "../components/SmallButton";
+
+
+
 const Contact = () => {
   return (
     <div className="contact-page py-5">
@@ -14,7 +18,7 @@ const Contact = () => {
        <div className="row">
         {/* Left Column */}
         <div className="col-md-6">
-          <h2>Send a Message</h2>
+          <h2>Send your thoughts</h2>
           <form>
             <label>Name</label>
             <input type="text" placeholder="Your Name" />
@@ -25,7 +29,9 @@ const Contact = () => {
             <label>Message</label>
             <textarea placeholder="Your Message" rows="5"></textarea>
 
-            <button type="submit">Send Message</button>
+           <div className="text-center mt-3">
+                                        <SmallButton text="Send Message" />
+                                    </div>
           </form>
         </div>
 
