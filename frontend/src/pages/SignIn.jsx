@@ -1,27 +1,66 @@
-import React from "react";
-import { Link } from "react-router-dom";
+import React, { useState } from "react";
+import axios from "axios";
+import { API_URL } from "../api";
+import { Link, useNavigate } from "react-router-dom";
 import "../App.css";
 import SmallButton from "../components/SmallButton";
 import Image from "../assets/SignUpImage.png";
 
 function SignIn() {
+    const navigate = useNavigate();
+
+    const [formData, setFormData] = useState({ email: "", password: "" });
+    const handleChange = (e) => {
+        setFormData({ ...formData, [e.target.name]: e.target.value });
+    };
+
+    const handleSubmit = async (e) => {
+        e.preventDefault();
+        try {
+            const res = await axios.post(`${API_URL}/auth/login`, formData);
+
+            localStorage.setItem("token", res.data.token);
+            localStorage.setItem("role", res.data.role);
+            localStorage.setItem("user", JSON.stringify(res.data.user));
+
+            alert(res.data.message);
+
+            // Redirect based on role
+            switch (res.data.role) {
+                case "admin":
+                    navigate("/admin-dashboard");
+                    break;
+                case "driver":
+                    navigate("/driver-dashboard");
+                    break;
+                case "user":
+                    navigate("/user-dashboard");
+                    break;
+                default:
+                    navigate("/dashboard"); // fallback
+            }
+        } catch (error) {
+            alert(error.response?.data?.message || "Login failed");
+        }
+    };
+
     return (
         <div className="signup-page">
-            <div className="container d-flex justify-content-center align-items-center" style={{ minHeight: "90vh" }}>
-                <div className="card shadow" style={{ borderRadius: "20px", width: "800px", height: "600px", overflow: "hidden",border: "none" }}>
+            <div className="container d-flex justify-content-center align-items-center" style={{ minHeight: "100vh" }}>
+                <div className="card shadow" style={{ borderRadius: "20px", width: "800px", height: "650px", overflow: "hidden", border: "none" }}>
                     <div className="row g-0 h-100">
-                        
+
                         {/* Left Section */}
                         <div className="col-6 d-flex align-items-center justify-content-center left-section">
                             <div className="p-4 w-100">
                                 <h3 className="mb-3 text-center text-white">Welcome Back!</h3>
                                 <div className="center-line mb-4 mx-auto" ></div>
 
-                                <form className="d-flex flex-column gap-4 align-items-center">
-                                    
-                                    <input type="email" placeholder="Email" className="form-control" />
-                                    <input type="password" placeholder="Password" className="form-control" />
-                                    
+                                <form className="d-flex flex-column gap-4 align-items-center" onSubmit={handleSubmit}>
+
+                                    <input type="email" name="email" placeholder="Email" className="form-control" onChange={handleChange} />
+                                    <input type="password" name="password" placeholder="Password" className="form-control" onChange={handleChange} />
+
 
                                     <div className="text-center mt-3">
                                         <SmallButton text="Sign In" />
