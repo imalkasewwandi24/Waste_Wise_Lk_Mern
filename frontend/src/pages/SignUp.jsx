@@ -8,7 +8,7 @@ function SignUp() {
     return (
         <div className="signup-page">
             <div className="container d-flex justify-content-center align-items-center" style={{ minHeight: "90vh" }}>
-                <div className="card shadow" style={{ borderRadius: "20px", width: "800px", height: "600px", overflow: "hidden",border: "none" }}>
+                <div className="card shadow" style={{ borderRadius: "20px", width: "800px", height: "600px", overflow: "hidden", border: "none" }}>
                     <div className="row g-0 h-100">
                         {/* Left Section */}
                         <div className="col-6 position-relative">
@@ -34,12 +34,19 @@ function SignUp() {
                                     <input type="password" placeholder="Password" className="form-control" />
                                     <input type="password" placeholder="Confirm Password" className="form-control" />
 
+                                    {/* Role Dropdown */}
+                                    <select className="form-control">
+                                        <option value="" disabled selected>Select Role</option>
+                                        <option value="user">User</option>
+                                        <option value="driver">Driver</option>
+                                    </select>
+
                                     <div className="text-center mt-3">
                                         <SmallButton text="Sign Up" />
                                     </div>
                                 </form>
 
-                                <p className="mt-4 text-center text-white ">
+                                <p className="mt-4 text-center text-white">
                                     Already have an account? <Link to="/signin">Sign In</Link>
                                 </p>
                             </div>
